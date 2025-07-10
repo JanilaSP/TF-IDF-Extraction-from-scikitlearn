@@ -1,0 +1,14 @@
+Vocabulary (feature names):
+['absolute' 'absorbs' 'all' 'amount' 'and' 'angle' 'area' 'between'
+ 'black' 'blackbody' 'body' 'boltzmann' 'describes' 'directly'
+ 'electromagnetic' 'emissive' 'energy' 'fourth' 'frequency' 'incidence'
+ 'incident' 'is' 'it' 'law' 'object' 'of' 'or' 'per' 'power'
+ 'proportional' 'radiated' 'radiates' 'radiation' 'regardless'
+ 'relationship' 'specifically' 'stefan' 'temperature' 'that' 'the'
+ 'theoretical' 'to' 'total' 'unit']
+
+Shape of TF-IDF matrix:
+(3, 44)
+
+Shape of TF-IDF matrix for new documents:
+(1, 44)
