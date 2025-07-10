@@ -1,0 +1,32 @@
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# Sample documents (corpus)
+documents = [
+    "A blackbody absorbs all incident electromagnetic radiation, regardless of frequency or angle of incidence.",
+    "The Stefan-Boltzmann Law describes the relationship between a black body's temperature and the total amount of energy it radiates.",
+    "Specifically, the total power radiated per unit area (emissive power) is directly proportional to the fourth power of the absolute temperature."]
+
+# Create a TfidfVectorizer instance
+vectorizer = TfidfVectorizer()
+
+# Fit the vectorizer to the documents and transform them into TF-IDF features
+# .fit_transform() learns the vocabulary and IDF values from the 'documents'
+# and then transforms those documents into a TF-IDF matrix.
+tfidf_matrix = vectorizer.fit_transform(documents)
+
+# You can inspect the learned vocabulary
+feature_names = vectorizer.get_feature_names_out()
+print("Vocabulary (feature names):")
+print(feature_names)
+
+# You can view the shape of the TF-IDF matrix (number of documents, number of unique terms)
+print("\nShape of TF-IDF matrix:")
+print(tfidf_matrix.shape)
+
+# You can also transform new, unseen documents using the already fitted vectorizer
+new_documents = [
+    "This law is a fundamental principle in understanding blackbody radiation and its applications in various fields."
+]
+new_tfidf_matrix = vectorizer.transform(new_documents)
+print("\nShape of TF-IDF matrix for new documents:")
+print(new_tfidf_matrix.shape)
